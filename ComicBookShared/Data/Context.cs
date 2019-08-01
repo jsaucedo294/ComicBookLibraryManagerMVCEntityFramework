@@ -13,14 +13,7 @@ namespace ComicBookShared.Data
         public DbSet<Series> Series { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Role> Roles { get; set; }
-
-        public Context()
-        {
-            // This call to the SetInitializer method is used 
-            // to configure EF to use our custom database initializer class
-            // which contains our app's database seed data.
-            Database.SetInitializer(new DatabaseInitializer());
-        }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
